@@ -5,13 +5,12 @@
   "main": "index.js",
   "scripts": {
     "deploy": "gcloud app deploy",
-    "start": "node app.js",
+    "start": "node app.js",    
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "mysql": "^2.17.1"
+    "express": "^4.16.4"
   }
 }
