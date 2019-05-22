@@ -12,10 +12,10 @@ app.listen(port, () => {
 });
 
 var  connection = mysql.createConnection({
-  host     : '34.66.231.173',
-  user     : 'user',
+  host     : 'localhost',
+  user     : 'root',
   password : 'bismi',
-  database : 'mysqlinstance'
+  database : 'mydatabase'
 });
 
 connection.connect(function(err){
