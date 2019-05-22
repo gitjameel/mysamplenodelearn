@@ -12,11 +12,10 @@ app.listen(port, () => {
 });
 
 var  connection = mysql.createConnection({
-  host     : 'remotemysql.com',
-  user     : 'YeyOcPJ0zt',
-  password : 'EJPS0PSb49',
-  database : 'YeyOcPJ0zt',
-  port:3306
+  host     : '34.66.231.173',
+  user     : 'user',
+  password : 'bismi',
+  database : 'mysqlinstance'
 });
 
 connection.connect(function(err){
