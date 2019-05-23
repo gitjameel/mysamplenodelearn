@@ -27,11 +27,13 @@ connection.connect(function(err){
 });
 
 
-
-connection.query('SELECT * from trafficdata', function(err, rows, fields) {
-    if (!err)
-      console.log('The solution is: ', rows);
-    else
-      console.log('Error while performing Query.');
-  });
-  
+app.get('/getdata', function(req, res){
+  connection.query('SELECT * from trafficdata', function(err, rows, fields) {
+      if (!err) {
+        console.log('The solution is: ', rows);
+        res.send(rows);
+      }
+      else
+        console.log('Error while performing Query.');
+    });
+});
