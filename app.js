@@ -26,6 +26,7 @@ connection.connect(function(err){
   }
 });
 
+app.get("/", (req,res) => res.status(200).send("Hello world").end());
 
 app.get('/getdata', function(req, res){
   connection.query('SELECT * from trafficdata', function(err, rows, fields) {
