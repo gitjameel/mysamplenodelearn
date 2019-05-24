@@ -11,7 +11,7 @@ app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`);
 });
 
-var  connection = mysql.createConnection({
+/* var  connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : 'bismi',
@@ -24,11 +24,11 @@ connection.connect(function(err){
   }else {
     console.log("database connected sucessfully");
   }
-});
+}); */
 
 app.get("/", (req,res) => res.status(200).send("Hello world").end());
 
-app.get('/getdata', function(req, res){
+/* app.get('/getdata', function(req, res){
   connection.query('SELECT * from trafficdata', function(err, rows, fields) {
       if (!err) {
         console.log('The solution is: ', rows);
@@ -37,4 +37,4 @@ app.get('/getdata', function(req, res){
       else
         console.log('Error while performing Query.');
     });
-});
+}); */
