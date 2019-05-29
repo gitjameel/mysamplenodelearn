@@ -1,17 +1,17 @@
 const express = require('express');
 var mysql = require('mysql');
+var routes = require('./routes.js');
 const app = express()
 const port = process.env.PORT || 5050
-
-app.get('/', (req, res) => res.send('Hello World!'))
-app.get('/details',(req,res) => res.send("Getting details service"))
 
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`);
 });
 
-/* var  connection = mysql.createConnection({
+app.use('/sample',routes);
+
+ var  connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : 'bismi',
@@ -24,9 +24,8 @@ connection.connect(function(err){
   }else {
     console.log("database connected sucessfully");
   }
-}); */
+}); 
 
-app.get("/", (req,res) => res.status(200).send("Hello world").end());
 
 /* app.get('/getdata', function(req, res){
   connection.query('SELECT * from trafficdata', function(err, rows, fields) {
@@ -38,3 +37,5 @@ app.get("/", (req,res) => res.status(200).send("Hello world").end());
         console.log('Error while performing Query.');
     });
 }); */
+
+module.exports= connection
