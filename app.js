@@ -14,7 +14,7 @@ app.use('/sample',routes);
  var  connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'bismi',
+  password : '',
   database : 'mydatabase'
 });
 
