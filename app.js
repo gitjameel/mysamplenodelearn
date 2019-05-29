@@ -1,5 +1,6 @@
 const express = require('express');
 var mysql = require('mysql');
+var http = requite('http');
 var routes = require('./routes.js');
 const app = express()
 const port = process.env.PORT || 5050
@@ -23,6 +24,9 @@ connection.connect(function(err){
     console.log("Error in connecting to database :" + err);
   }else {
     console.log("database connected sucessfully");
+      http.get("http://35.238.192.46:5050/sample/" ,(resp) => {
+        console.log("Rest call successful");
+      });
   }
 }); 
 
